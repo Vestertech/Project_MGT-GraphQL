@@ -5,6 +5,7 @@ import { GET_PROJECTS } from "../queries/projectQueries";
 
 export default function Projects() {
   const { loading, error, data } = useQuery(GET_PROJECTS);
+  console.log("Data:", data);
 
   if (loading) return <Spinner />;
   if (error) return <p>Something Went Wrong</p>;
